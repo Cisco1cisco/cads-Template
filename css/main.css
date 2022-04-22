@@ -69,8 +69,10 @@ ul {
 /* Start Header */
 
 header {
-    background-color: var(--main-color, #12153c);
     height: 83px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
 }
 
 header .container {
@@ -184,3 +186,108 @@ header .container .menu ul li a:hover {
 }
 
 /* End Header */
+
+/* Start Landing */
+
+.landing {
+    background-image: url(../photos/banner.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 120vh;
+    padding-bottom: 300px;
+}
+
+@media (max-width: 768px) {
+    .landing {
+        height: auto;
+    }
+}
+
+.landing .container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .landing .container {
+        flex-direction: column;
+    }
+}
+
+.landing .container .text {
+    width: 91%;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .landing .container .text {
+        margin-bottom: 50px;
+    }
+}
+
+.landing .container .text h1 {
+    font-size: 42px;
+    color: #ffe25b;
+}
+
+@media (max-width: 991px) {
+    .landing .container .text h1 {
+        font-size: 35px;
+    }
+}
+
+.landing .container .text p {
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+    .landing .container .text p {
+        font-size: 29px;
+    }
+}
+
+.landing .container .text span {
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+    .landing .container .text span {
+        font-size: 40px;
+    }
+}
+
+.landing .container .text a {
+    display: block;
+    width: fit-content;
+    padding: 20px 50px;
+    border: 1px solid white;
+    color: white;
+    text-transform: capitalize;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: var(--trans-dur, 0.5s);
+    -webkit-transition: var(--trans-dur, 0.5s);
+    -moz-transition: var(--trans-dur, 0.5s);
+    -ms-transition: var(--trans-dur, 0.5s);
+    -o-transition: var(--trans-dur, 0.5s);
+}
+
+.landing .container .text a:hover {
+    background-color: #d0b608;
+}
+
+.landing .container .image img {
+    max-width: 100%;
+}
+
+/* End Landing */
