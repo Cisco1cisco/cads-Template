@@ -4,6 +4,7 @@
     --main-color: #12153c;
     --title-color: #d8bd08;
     --parg-color: #232324;
+    --trans-dur: 0.5s;
 }
 
 /* End Variables */
@@ -64,3 +65,122 @@ ul {
 
 /* Start Component */
 /* End Component */
+
+/* Start Header */
+
+header {
+    background-color: var(--main-color, #12153c);
+    height: 83px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .container .logo {
+    cursor: pointer;
+}
+
+header .container nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    header .container nav {
+        display: none;
+    }
+}
+
+header .container nav a {
+    display: block;
+    margin-right: 50px;
+    color: white;
+}
+
+header .container nav a:first-of-type {
+    background-color: var(--title-color, #d8bd08);
+    padding: 10px 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+header .container nav a:first-of-type:hover {
+    background-color: #000;
+}
+
+header .container nav a:last-of-type {
+    transition: var(--trans-dur, 0.5s);
+    -webkit-transition: var(--trans-dur, 0.5s);
+    -moz-transition: var(--trans-dur, 0.5s);
+    -ms-transition: var(--trans-dur, 0.5s);
+    -o-transition: var(--trans-dur, 0.5s);
+}
+
+header .container nav a:last-of-type:hover {
+    color: var(--title-color, #d8bd08);
+}
+
+header .container .menu {
+    width: 30px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    header .container .menu {
+        display: none;
+    }
+}
+
+header .container .menu span {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    display: block;
+    margin-bottom: 7px;
+}
+
+header .container .menu ul {
+    position: absolute;
+    left: -105px;
+    bottom: -125px;
+    background-color: #02185b;
+    width: 135px;
+    text-align: center;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--trans-dur, 0.5s);
+    -webkit-transition: var(--trans-dur, 0.5s);
+    -moz-transition: var(--trans-dur, 0.5s);
+    -ms-transition: var(--trans-dur, 0.5s);
+    -o-transition: var(--trans-dur, 0.5s);
+}
+
+header .container .menu:hover ul {
+    z-index: 1;
+    opacity: 1;
+}
+
+header .container .menu ul li a {
+    color: white;
+    padding: 20px 10px;
+    display: block;
+    transition: var(--trans-dur, 0.5s);
+    -webkit-transition: var(--trans-dur, 0.5s);
+    -moz-transition: var(--trans-dur, 0.5s);
+    -ms-transition: var(--trans-dur, 0.5s);
+    -o-transition: var(--trans-dur, 0.5s);
+}
+
+header .container .menu ul li a:hover {
+    color: var(--title-color, #d8bd08);
+}
+
+/* End Header */
