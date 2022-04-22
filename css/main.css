@@ -64,6 +64,37 @@ ul {
 /* End Global Rules */
 
 /* Start Component */
+
+.main-title {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.main-title span {
+    display: block;
+    color: var(--title-color, #d8bd08);
+
+}
+
+.main-title h2 {
+    font-size: 42px;
+    color: var(--main-color, #12153c);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+    .main-title h2 {
+        font-size: 30px;
+    }
+}
+
+.main-title p {
+    color: var(--parg-color, #232324);
+    font-size: 17px;
+    line-height: 1.5;
+}
+
 /* End Component */
 
 /* Start Header */
@@ -291,3 +322,26 @@ header .container .menu ul li a:hover {
 }
 
 /* End Landing */
+
+/* Start About */
+
+.about {
+    background-color: #f3f2f2;
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about .container .main-title {
+    margin-bottom: 50px;
+}
+
+.about .container .image {
+    text-align: center;
+}
+
+.about .container .image img {
+    max-width: 100%;
+}
+
+/* End About */
