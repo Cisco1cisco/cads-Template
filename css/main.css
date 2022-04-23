@@ -69,6 +69,7 @@ ul {
     text-align: center;
     width: 80%;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .main-title span {
@@ -332,10 +333,6 @@ header .container .menu ul li a:hover {
     padding-bottom: 50px;
 }
 
-.about .container .main-title {
-    margin-bottom: 50px;
-}
-
 .about .container .image {
     text-align: center;
 }
@@ -345,3 +342,75 @@ header .container .menu ul li a:hover {
 }
 
 /* End About */
+
+/* Start Choose */
+
+.choose {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.choose .container .choose-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .choose .container .choose-cont {
+        justify-content: center;
+    }
+}
+
+.choose .container .choose-cont .card {
+    flex-basis: calc((100% / 3) - 30px);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .choose .container .choose-cont .card {
+        flex-basis: 90%;
+        margin-bottom: 50px;
+    }
+}
+
+.choose .container .choose-cont .card img {
+    max-width: 100%;
+    transform: translateY(6px);
+    -webkit-transform: translateY(6px);
+    -moz-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    -o-transform: translateY(6px);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .choose .container .choose-cont .card img {
+        width: 100%;
+    }
+}
+
+.choose .container .choose-cont .card .text {
+    background-color: var(--main-color, #12153c);
+    color: white;
+    padding: 20px;
+}
+
+.choose .container .choose-cont .card .text h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .choose .container .choose-cont .card .text h3 {
+        font-size: 17px;
+    }
+}
+
+.choose .container .choose-cont .card .text p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* End Choose */
